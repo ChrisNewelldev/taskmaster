@@ -9,7 +9,7 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/style/main.css">
     <link rel="stylesheet" href="assets/style/style.css">
-    <title>taskmaster</title>
+    <title>Task Master</title>
 </head>
 
 <body>
@@ -17,16 +17,56 @@
         <nav class="navbar navbar-dark navbar-expand bg-dark text-light">
             <a class="navbar-brand" href="#">
                 <img src="assets/img/logo.png" width="45" height="45" alt="" loading="lazy">
-                <span class="ml-2">taskmaster</span>
+                <span class="ml-2 justify-content-center">Task Master</span>
             </a>
         </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-group">
+                        <input type="text" name="text" id="text" class="form-control" placeholder="List name...">
+                    </div>
+                </div>
+                <div class="col-3">
+                    Color:
+                    <select onchange="this.style.backgroundColor=this.value">
+                        <option value="red">Red</option>
+                        <option value="green">Green</option>
+                        <option value="blue">Blue</option>
+                        <option value="yellow">Yellow</option>
+                        <option value="purple">Purple</option>
+                      </select>
+                    <button>Create</button>
+                </div>
+            </div>
+        </div>
     </header>
     <main class="container">
+        <div class="col-md-3 col-sm-2 my-3">
+            <div class="list bg-light shadow">
+                <div class="p-3">
+                    <div class="text-center color-blue">
+                        <p><b>Task title</b></p>
+                    </div>
+                    <p>task</p>
+                    <div class="form-group">
+                      <label for=""></label>
+                      <input type="text"
+                        class="form-control" name="" id="" aria-describedby="helpId" placeholder="Add Task...">
+                      <small id="helpId" class="form-text text-muted"></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="row" id="lists">
+
+            </div>
+        </div>
         <div id="app"></div>
     </main>
     <footer class="bg-dark text-light">
         <div class="text-center">
-            <p><small>Made with love by Codeworks</small></p>
+            <p><small>Made with love by Chris</small></p>
         </div>
     </footer>
 
