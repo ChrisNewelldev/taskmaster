@@ -1,7 +1,7 @@
 import { ProxyState } from "../AppState.js";
 import { valuesService } from "../Services/ValuesService.js";
 
-//test git commit
+
 //Private
 function _draw() {
   let values = ProxyState.values;
