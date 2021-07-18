@@ -1,12 +1,12 @@
 import { ProxyState } from "../AppState.js"
 import { generateId } from "../Utils/GenerateId.js"
 
-export default class List {
-  constructor({ crust, size, name, id = generateId() }) {
+export default clnass List {
+  constructor({listName, newTask, id = generateId() }) {
     this.id = id
-    this.crust = crust
-    this.size = size
-    this.name = name
+    this.listName = this.listname
+    this.ewTask = task
+    
   }
 
   get Template() {
@@ -37,5 +37,4 @@ export default class List {
       </div>
     </div>`
   }
-
-  
+}

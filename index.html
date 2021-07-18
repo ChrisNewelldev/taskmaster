@@ -14,10 +14,10 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-dark navbar-expand bg-dark text-light">
+        <nav class="navbar navbar-dark navbar-expand bg-dark text-light justify-content-center">
             <a class="navbar-brand" href="#">
                 <img src="assets/img/logo.png" width="45" height="45" alt="" loading="lazy">
-                <span class="ml-2 justify-content-center">Task Master</span>
+                <span class="ml-2">Task Master</span>
             </a>
         </nav>
         <div class="container-fluid">
@@ -30,6 +30,7 @@
                 <div class="col-3">
                     Color:
                     <select onchange="this.style.backgroundColor=this.value">
+                        <option value="white"></option>
                         <option value="red">Red</option>
                         <option value="green">Green</option>
                         <option value="blue">Blue</option>
@@ -45,11 +46,14 @@
         <div class="col-md-3 col-sm-2 my-3">
             <div class="list bg-light shadow">
                 <div class="p-3">
-                    <div class="text-center color-blue">
+                    <div class="text-center backgroundColor=this.value">
                         <p><b>Task title</b></p>
                     </div>
-                    <p>task</p>
                     <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                            <label class="custom-control-label" for="customCheck1">Task</label>
+                          </div>
                       <label for=""></label>
                       <input type="text"
                         class="form-control" name="" id="" aria-describedby="helpId" placeholder="Add Task...">
