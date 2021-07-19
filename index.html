@@ -25,6 +25,8 @@
                 <div class="col-4">
                     <div class="form-group">
                         <input type="text" name="text" id="text" class="form-control" placeholder="List name...">
+                        <input type="color" name="color" id="color" class="form-control" placeholder="Color...">
+                        <input type="button" name="createList" id="newList" class="form-control">
                     </div>
                 </div>
                 <div class="col-3">
@@ -37,7 +39,7 @@
                         <option value="yellow">Yellow</option>
                         <option value="purple">Purple</option>
                       </select>
-                    <button>Create</button>
+                    <button onclick="app.ListsController.createList()">Create</button>
                 </div>
             </div>
         </div>
