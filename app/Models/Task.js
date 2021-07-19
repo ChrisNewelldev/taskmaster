@@ -15,7 +15,7 @@ export default class Task {
       <div class="bg-light rounded shadow-light">
         <div class="d-flex justify-content-around align-items-center rounded-top bg-pizza text-light text-center p-3">
             <h3>${this.name.toUpperCase()}</h3>
-            <i class="fa fa-trash action text-danger" title="delete pizza" onclick="app.pizzasController.//destroy('${this.id}')"></i>
+          
         </div>
         <div class="p-2">
             <p><b>Pie Style: </b></p>

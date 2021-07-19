@@ -20,7 +20,7 @@ export default class ListsController {
     loadState()
 
     // NOTE this is here so when the page first loads it draws the pizzas already in the proxystate
-    // _draw()
+    // _draw()/
   }
 
 
@@ -28,9 +28,10 @@ export default class ListsController {
     // NOTE PREVENTS PAGE RELOADING
     event.preventDefault()
     let form = event.target
+    let input = head
     let rawList = {
       name: form.name.value,
-      color: form.color.value
+      color: input.color
     }
     listsService.createList(rawList)
     form.reset()
