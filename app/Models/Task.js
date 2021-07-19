@@ -1,11 +1,11 @@
 import { ProxyState } from "../AppState.js"
 import { generateId } from "../Utils/GenerateId.js"
 
-export default clnass List {
+export default class List {
   constructor({listName, newTask, id = generateId() }) {
     this.id = id
-    this.listName = this.listname
-    this.ewTask = task
+    this.taskName = this.taskname
+    this.newTask = task
     
   }
 

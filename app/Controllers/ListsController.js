@@ -1,22 +1,21 @@
-  
 import { ProxyState } from "../AppState.js"
-import { pizzasService } from "../Services/PizzasService.js"
+import { listsService } from "../Services/ListsService.js"
 import { loadState, saveState } from "../Utils/LocalStorage.js"
 
 function _draw() {
   let template = ''
-  let pizzas = ProxyState.pizzas
-  pizzas.forEach(pizza => template += pizza.Template)
-  document.getElementById('pizzas').innerHTML = template
+  let lists = ProxyState.lists
+  lists.forEach(list => template += list.Template)
+  document.getElementById('lists').innerHTML = template
 }
 
 
-export default class PizzasController {
+export default class ListsController {
   constructor() {
-    ProxyState.on('pizzas', _draw)
-    ProxyState.on('toppings', _draw)
-    ProxyState.on('pizzas', saveState)
-    ProxyState.on('toppings', saveState)
+    ProxyState.on('lists', _draw)
+    ProxyState.on('tasks', _draw)
+    ProxyState.on('lists', saveState)
+    ProxyState.on('tasks', saveState)
 
     loadState()
 
@@ -25,36 +24,36 @@ export default class PizzasController {
   }
 
 
-  createPizza() {
+  createList() {
     // NOTE PREVENTS PAGE RELOADING
     event.preventDefault()
     let form = event.target
-    let rawPizza = {
+    let rawList = {
       name: form.name.value,
       crust: form.crust.value,
       size: form.size.value
     }
-    pizzasService.createPizza(rawPizza)
+    listsService.createList(rawList)
     form.reset()
   }
 
 
   destroy(id) {
-    pizzasService.destroy(id)
+    listsService.destroy(id)
   }
 
-  addTopping(pizzaId) {
+  addTask(listId) {
     event.preventDefault()
     let form = event.target
-    let rawTopping = {
-      pizzaId,
-      name: form.topping.value
+    let rawTask = {
+      listId,
+      name: form.task.value
     }
-    pizzasService.addTopping(rawTopping)
+    listsService.addTask(rawTask)
     form.reset()
   }
 
-  removeTopping(id) {
-    pizzasService.removeTopping(id)
+  removeTask(id) {
+    listsService.removeTask(id)
   }
 }

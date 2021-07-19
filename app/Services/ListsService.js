@@ -16,26 +16,26 @@
   //}}
 
   import { ProxyState } from "../AppState.js"
-import Pizza from "../Models/Pizza.js"
-import Topping from "../Models/Topping.js"
+import List from "../Models/List.js"
+import Task from "../Models/Task.js"
 
-class PizzasService {
+class ListsService {
 
-  createPizza(rawPizza) {
-    ProxyState.pizzas = [...ProxyState.pizzas, new Pizza(rawPizza)]
+  createList(rawList) {
+    ProxyState.lists = [...ProxyState.lists, new list(rawList)]
   }
 
-  addTopping(rawTopping) {
-    ProxyState.toppings = [...ProxyState.toppings, new Topping(rawTopping)]
+  addTask(rawTask) {
+    ProxyState.task = [...ProxyState.task, new Task(rawTask)]
   }
 
   destroy(id) {
-    ProxyState.pizzas = ProxyState.pizzas.filter(pizza => pizza.id != id)
-    ProxyState.toppings = ProxyState.toppings.filter(topping => topping.pizzaId != id)
+    ProxyState.lists = ProxyState.lists.filter(list => list.id != id)
+    ProxyState.tasks = ProxyState.tasks.filter(task => task.listId != id)
   }
-  removeTopping(id) {
-    ProxyState.toppings = ProxyState.toppings.filter(topping => topping.id != id)
+  removeTask(id) {
+    ProxyState.tasks = ProxyState.tasks.filter(task => task.id != id)
   }
 }
 
-export const pizzasService = new PizzasService()
+export const listsService = new ListsService()
