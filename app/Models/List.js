@@ -13,7 +13,7 @@ export default class List {
     <div class="col-md-3 col-sm-2 my-3">
             <div class="list bg-light shadow">
                 <div class="p-3">
-                    <div class="text-center backgroundColor=this.value">
+                    <div class="text-center onchange backgroundColor=this.color.value">
                         <p><b>${this.name}</b></p>
                         <i class="fa fa-trash action text-danger" title="delete list" onclick="app.listsController.destroy('${this.id}')"></i>
                     </div>

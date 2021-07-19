@@ -16,6 +16,9 @@ export function loadState() {
   if (data != null) {
     ProxyState.lists = data.lists.map(l => new List(l))
     ProxyState.tasks = data.tasks.map(t => new Task(t))
+  localStorage.clear()
   }
 
 }
+
+
