@@ -22,7 +22,7 @@ import Task from "../Models/Task.js"
 class ListsService {
 
   createList(rawList) {
-    ProxyState.lists = [...ProxyState.lists, new list(rawList)]
+    ProxyState.lists = [...ProxyState.lists, new List(rawList)]
   }
 
   addTask(rawTask) {

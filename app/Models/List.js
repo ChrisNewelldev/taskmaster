@@ -2,9 +2,10 @@ import { ProxyState } from "../AppState.js"
 import { generateId } from "../Utils/GenerateId.js"
 
 export default class List {
-  constructor({listName, newTask, id = generateId() }) {
+  constructor({name, color, id = generateId() }) {
     this.id = id
-    this.listName = this.listname
+    this.name= name
+    this.color = color
   }
 
   get Template() {
@@ -13,7 +14,7 @@ export default class List {
             <div class="list bg-light shadow">
                 <div class="p-3">
                     <div class="text-center backgroundColor=this.value">
-                        <p><b>${this.listName.toUpperCase}</b></p>
+                        <p><b>${this.name}</b></p>
                         <i class="fa fa-trash action text-danger" title="delete list" onclick="app.listsController.destroy('${this.id}')"></i>
                     </div>
                     <div class="form-group">
@@ -23,7 +24,7 @@ export default class List {
                           </div>
                       <label for=""></label>
                       <input type="text"
-                        class="form-control" name="" id="" aria-describedby="helpId" placeholder="Add Task...">
+                        class="form-control" name="" id="" aria-described by="helpId" placeholder="Add Task...">
                       <small id="helpId" class="form-text text-muted"></small>
                     </div>
                 </div>

@@ -1,11 +1,11 @@
 import { ProxyState } from "../AppState.js"
 import { generateId } from "../Utils/GenerateId.js"
 
-export default class List {
-  constructor({listName, newTask, id = generateId() }) {
+export default class Task {
+  constructor({name, color, id = generateId() }) {
     this.id = id
-    this.taskName = this.taskname
-    this.newTask = task
+    this.name = name
+    this.color = color
     
   }
 
@@ -15,7 +15,7 @@ export default class List {
       <div class="bg-light rounded shadow-light">
         <div class="d-flex justify-content-around align-items-center rounded-top bg-pizza text-light text-center p-3">
             <h3>${this.name.toUpperCase()}</h3>
-            <i class="fa fa-trash action text-danger" title="delete pizza" onclick="app.pizzasController.destroy('${this.id}')"></i>
+            <i class="fa fa-trash action text-danger" title="delete pizza" onclick="app.pizzasController.//destroy('${this.id}')"></i>
         </div>
         <div class="p-2">
             <p><b>Pie Style: </b></p>

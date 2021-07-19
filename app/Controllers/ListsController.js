@@ -30,8 +30,7 @@ export default class ListsController {
     let form = event.target
     let rawList = {
       name: form.name.value,
-      crust: form.crust.value,
-      size: form.size.value
+      color: form.color.value
     }
     listsService.createList(rawList)
     form.reset()
