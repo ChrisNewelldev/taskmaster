@@ -1,40 +1,32 @@
 import { ProxyState } from "../AppState.js"
 import { generateId } from "../Utils/GenerateId.js"
 
-export default clnass List {
+export default class List {
   constructor({listName, newTask, id = generateId() }) {
     this.id = id
     this.listName = this.listname
-    this.ewTask = task
-    
   }
 
   get Template() {
     return `
-    <div class="col-4 mt-3">
-      <div class="bg-light rounded shadow-light">
-        <div class="d-flex justify-content-around align-items-center rounded-top bg-pizza text-light text-center p-3">
-            <h3>${this.name.toUpperCase()}</h3>
-            <i class="fa fa-trash action text-danger" title="delete pizza" onclick="app.pizzasController.destroy('${this.id}')"></i>
-        </div>
-        <div class="p-2">
-            <p><b>Pie Style: </b></p>
-            <ul class="bg-gray lighten-40 p-2 pl-4">
-                <li>${this.crust}</li>
-                <li class="${this.size == 'MEGA' ? 'text-danger' : ''}">${this.size}</li>
-            </ul>
-        </div>
-        <div class="p-2 ">
-            <p><b>Toppings: </b></p>
-            <ul class="bg-gray lighten-40 p-2 pl-4">
-                ${this.MyToppings}
-            </ul>
-        </div>
-        <form onsubmit="app.pizzasController.addTopping('${this.id}')"> 
-          <input type="text" name="topping" placeholder="Topping..." required>
-          <button type="submit" class="btn btn-outline-success">+</button>
-        </form>
-      </div>
-    </div>`
+    <div class="col-md-3 col-sm-2 my-3">
+            <div class="list bg-light shadow">
+                <div class="p-3">
+                    <div class="text-center backgroundColor=this.value">
+                        <p><b>${this.listName.toUpperCase}</b></p>
+                        <i class="fa fa-trash action text-danger" title="delete list" onclick="app.listsController.destroy('${this.id}')"></i>
+                    </div>
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                            <label class="custom-control-label" for="customCheck1">Task</label>
+                          </div>
+                      <label for=""></label>
+                      <input type="text"
+                        class="form-control" name="" id="" aria-describedby="helpId" placeholder="Add Task...">
+                      <small id="helpId" class="form-text text-muted"></small>
+                    </div>
+                </div>
+            </div>`
   }
 }
