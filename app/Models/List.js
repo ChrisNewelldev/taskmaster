@@ -16,7 +16,8 @@ export default class List {
                 <div class="p-3">
                     <div class="text-center" style="background-color: ${this.color}">
                         <p><b>${this.name}</b></p>
-                        <button onclick="app.ListsController.removeList()">x</button>
+                        
+                        <i class="fa fa-trash action text-danger" title="delete list" onclick="app.listsController.destroy('${this.id}')">X</i>
                         
                     </div>
                     <div class="form-group">
@@ -35,6 +36,5 @@ export default class List {
             </div>
             </div>
             `
-
   }
 }
